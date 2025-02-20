@@ -1,0 +1,36 @@
+@import url('../../../styles/variables.scss');
+
+.input-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 344px;
+    border: 0.67px solid var(--color-secondary);
+    border-radius: 6.25rem;
+    padding: 0.625rem 1rem;
+}
+
+
+.input{
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #131313;
+    border: none;
+    width: 95%;
+    &::placeholder{
+        color: var(--color-text-secondary);
+    }
+    &:focus{
+        outline: none;
+    }
+    &:focus-visible{
+        outline: none;
+    }
+}
+
+.icon--container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
