@@ -11,6 +11,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), libInjectCss(), dts({ include: ["lib"] })],
+  css:{
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+      },
+    },
+  },
   build: {
     copyPublicDir: false,
     lib: {
