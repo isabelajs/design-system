@@ -24,7 +24,10 @@ const Icon = ({ icon, customStyles }: IconProps) => {
     return iconsMap.get(iconName.substring(0, 2));
   };
 
-  const icons: any = getIcon(icon);
+  // Obtiene el conjunto de iconos correspondiente al prefijo (Bs, Ai, etc)
+  const icons: Record<string, IconType> = getIcon(icon);
+  
+  // Obtiene el componente de icono específico basado en el nombre completo
   const TheIcon: IconType = icons[icon];
 
   return <TheIcon style={customStyles} />;
