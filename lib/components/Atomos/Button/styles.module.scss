@@ -1,9 +1,13 @@
 .button {
-    padding: 0.75rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 6.25rem;
     width: 344px;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     &--primary {
         background-color: #004E64;
         color: #fff;
@@ -18,5 +22,9 @@
         border: 1px solid #004E64;
         background: white;
         color: #004E64;
+    }
+    &:disabled{
+        opacity: 0.5;
+        cursor: not-allowed;
     }
 }
