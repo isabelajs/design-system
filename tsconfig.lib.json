@@ -1,4 +1,9 @@
 {
   "extends": "./tsconfig.app.json",
+  "exclude": [
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx"
+  ],
   "include": ["lib"]
 }

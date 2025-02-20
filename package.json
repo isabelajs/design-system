@@ -20,7 +20,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -p ./tsconfig.lib.json && vite build",
+    "build": "tsc --p ./tsconfig.lib.json && vite build",
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
