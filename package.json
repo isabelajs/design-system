@@ -1,6 +1,7 @@
 {
   "name": "design-system",
   "private": true,
+  "description": "Design System",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/main.js",
@@ -11,6 +12,12 @@
   "sideEffects": [
     "**/*.css"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isabelajs/design-system"
+  },
+  "author": "Isabela Js",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc -p ./tsconfig.lib.json && vite build",
