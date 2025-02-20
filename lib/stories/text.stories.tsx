@@ -6,7 +6,7 @@ import Text from "../components/Atomos/Text";
  * Puede ser utilizado para títulos (h1, h2) o texto regular (body1, body2).
  */
 const meta: Meta<typeof Text> = {
-  title: "Text",
+  title: "Atomos/Text",
   component: Text,
   tags: ['autodocs'],
   argTypes: {

@@ -10,7 +10,7 @@ export type TextProps = {
     /** Peso de la fuente */
     fontWeight?: "regular" | "medium" | "semibold" | "bold";
     /** Color del texto */
-    color?: "primary" | "secondary" | "tertiary" | "error" | "success" | "inherit";
+    color?: "primary" | "secondary" | "tertiary" | "error" | "success" | "inherit" | "white";
     /** Estilos personalizados adicionales */
     customStyles?: React.CSSProperties;
     /** Clase CSS adicional */
