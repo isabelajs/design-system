@@ -1,19 +1,29 @@
+@import '../../../styles/variables.scss';
+
 .text {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
+    
+    // Tipos de texto
     &--h1 {
-        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 1.2;
         font-weight: 700;
     }
     &--h2 {
-        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.3;
         font-weight: 600;
     }
     &--body1 {
-        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.5;
         font-weight: 400;
     }
     &--body2 {
-        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 1.5;
         font-weight: 400;
     }
     
@@ -29,6 +39,28 @@
         }
         &--bold {
             font-weight: 700;
+        }
+    }
+
+    // Colores
+    &-color {
+        &--primary {
+            color: var(--color-text-primary);
+        }
+        &--secondary {
+            color: var(--color-text-secondary);
+        }
+        &--tertiary {
+            color: var(--color-text-tertiary);
+        }
+        &--error {
+            color: var(--color-error);
+        }
+        &--success {
+            color: var(--color-success);
+        }
+        &--inherit {
+            color: inherit;
         }
     }
 }

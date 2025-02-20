@@ -1,0 +1,49 @@
+:root {
+    // Colores principales
+    --color-primary: #131313;
+    --color-secondary: #00A5EF;
+    
+    // Colores de estado
+    --color-success: #34a853;
+    --color-error: #ea4335;
+    --color-warning: #fbbc05;
+    
+    // Colores neutrales
+    --color-black: #202124;
+    --color-white: #ffffff;
+    --color-gray-100: #f8f9fa;
+    --color-gray-200: #e8eaed;
+    --color-gray-300: #dadce0;
+    --color-gray-400: #bdc1c6;
+    --color-gray-500: #9aa0a6;
+    
+    // Colores de fondo
+    --color-background: #ffffff;
+    --color-background-secondary: #f8f9fa;
+    
+    // Colores de texto
+    --color-text-primary: #131313;
+    --color-text-secondary: #C5C5C5;
+    --color-text-tertiary: #00A5EF;
+    --color-text-disabled: #9aa0a6;
+
+    // Tipografía
+    --font-family-primary: 'Montserrat', sans-serif;
+    
+    // Tamaños de fuente
+    --font-size-h1: 1.25rem;
+    --font-size-h2: 1rem;
+    --font-size-body1: 1rem;
+    --font-size-body2: 0.875rem;
+    
+    // Pesos de fuente
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    // Line heights
+    --line-height-h1: 1.2;
+    --line-height-h2: 1.3;
+    --line-height-body: 1.5;
+}
