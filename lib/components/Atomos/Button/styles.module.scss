@@ -1,0 +1,22 @@
+.button {
+    padding: 0.75rem;
+    border-radius: 6.25rem;
+    width: 344px;
+    border: none;
+    cursor: pointer;
+    &--primary {
+        background-color: #004E64;
+        color: #fff;
+    }
+
+    &--secondary {
+        background-color: #063C4B;
+        color: #fff;
+    }
+
+    &--outline {
+        border: 1px solid #004E64;
+        background: white;
+        color: #004E64;
+    }
+}
