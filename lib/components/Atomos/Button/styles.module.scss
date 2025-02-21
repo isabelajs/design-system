@@ -1,7 +1,6 @@
 .button {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 2rem;
     border-radius: 6.25rem;
-    width: 344px;
     border: none;
     cursor: pointer;
     display: flex;
@@ -23,8 +22,24 @@
         background: white;
         color: #004E64;
     }
+    &--small{
+        width: max-content;
+    }
+    &--large{
+        width: 100%;
+    }
+
+
     &:disabled{
         opacity: 0.5;
         cursor: not-allowed;
     }
+    &:focus {
+        outline: none;
+    }
+    &:focus-visible{
+        outline: none;
+    }
+
+
 }

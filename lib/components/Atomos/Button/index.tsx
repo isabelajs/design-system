@@ -21,6 +21,8 @@ export type ButtonProps = {
   endIcon?: string;
   /** Clase CSS adicional */
   className?: string;
+  /** Tamaño del botón */
+  size?: 'small' | 'large';
   /** Tipo de botón HTML */
   type?: 'button' | 'submit' | 'reset';
 };
@@ -28,6 +30,7 @@ export type ButtonProps = {
 const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   disabled = false,
+  size = 'small',
   text,
   onClick,
   customStyles,
@@ -40,6 +43,7 @@ const Button: React.FC<ButtonProps> = ({
   const buttonClasses = classNames(
     styles.button,
     styles[`button--${variant}`],
+    styles[`button--${size}`],
     className
   );
 

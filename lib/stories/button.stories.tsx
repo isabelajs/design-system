@@ -31,6 +31,11 @@ const meta: Meta<typeof Button> = {
     customStyles: {
       description: 'Estilos CSS personalizados',
       control: 'object'
+    },
+    size:{
+      description: 'Tamaño del botón',
+      options: ['small', 'large'],
+      control: { type: 'radio' }
     }
   }
 };
@@ -41,9 +46,10 @@ type Story = StoryObj<typeof Button>;
 // Variante primaria del botón
 export const Primary: Story = {
   args: {
-    text: "Botón Primario",
+    text: "Botón Primario y Pequeño",
     variant: "primary",
     disabled: false,
+    size: "small",
     onClick: () => console.log("Click en botón primario"),
   },
 };
@@ -51,9 +57,10 @@ export const Primary: Story = {
 // Variante secundaria del botón
 export const Secondary: Story = {
   args: {
-    text: "Botón Secundario", 
+    text: "Botón Secundario y Largo", 
     variant: "secondary",
     disabled: false,
+    size: "large",
     onClick: () => console.log("Click en botón secundario"),
   },
 };
