@@ -1,36 +1,51 @@
-import * as bsIcons from "react-icons/bs";
-import * as aiIcons from "react-icons/ai";
-import * as biIcons from "react-icons/bi";
-import * as giIcons from "react-icons/gi";
-import * as faIcons from "react-icons/fa";
-import * as tbIcons from "react-icons/tb";
 import { IconType } from "react-icons";
+import React, { useEffect, useState } from "react";
 
 export interface IconProps {
   icon: string;
   customStyles?: React.CSSProperties;
 }
 
+const iconModules = {
+  bs: () => import('react-icons/bs'),
+  ai: () => import('react-icons/ai'),
+  bi: () => import('react-icons/bi'),
+  gi: () => import('react-icons/gi'),
+  fa: () => import('react-icons/fa'),
+  tb: () => import('react-icons/tb'),
+};
+
 const Icon = ({ icon, customStyles }: IconProps) => {
-  const getIcon = (iconName: string) => {
-    const iconsMap = new Map();
-    iconsMap.set("Bs", bsIcons);
-    iconsMap.set("Ai", aiIcons);
-    iconsMap.set("Bi", biIcons);
-    iconsMap.set("Gi", giIcons);
-    iconsMap.set("Fa", faIcons);
-    iconsMap.set("Tb", tbIcons);
+  const [IconComponent, setIconComponent] = useState<IconType | null>(null);
 
-    return iconsMap.get(iconName.substring(0, 2));
-  };
+  useEffect(() => {
+    const loadIcon = async () => {
+      try {
+        const prefix = icon.substring(0, 2).toLowerCase();
+        const importModule = iconModules[prefix as keyof typeof iconModules];
 
-  // Obtiene el conjunto de iconos correspondiente al prefijo (Bs, Ai, etc)
-  const icons: Record<string, IconType> = getIcon(icon);
-  
-  // Obtiene el componente de icono específico basado en el nombre completo
-  const TheIcon: IconType = icons[icon];
+        if (!importModule) {
+          return;
+        }
 
-  return <TheIcon style={customStyles} />;
+        const module = await importModule();
+        const loadedIcon = (module as unknown as { [key: string]: IconType })[icon];
+
+        if (!loadedIcon) {
+          return;
+        }
+
+        setIconComponent(() => loadedIcon);
+      } catch (error) {
+        console.error('Error loading icon:', error);
+      }
+    };
+
+    loadIcon();
+  }, [icon]);
+
+  if (!IconComponent) return null;
+  return <IconComponent style={customStyles} />;
 };
 
 export default Icon;
