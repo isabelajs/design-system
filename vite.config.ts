@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), libInjectCss(), dts({ include: ["lib"] })],
+  plugins: [react(), libInjectCss(), dts({tsconfigPath: resolve(__dirname, "tsconfig.lib.json"),})],
   css:{
     preprocessorOptions: {
       scss: {
