@@ -16,7 +16,7 @@
     font-family: 'Montserrat', sans-serif;
     color: #131313;
     border: none;
-    width: 95%;
+    width: 90%;
     background-color: transparent;
     &::placeholder{
         color: var(--color-text-secondary);
@@ -27,8 +27,14 @@
     &:focus-visible{
         outline: none;
     }
+    :-internal-autofill-selected {
+        background-color: transparent !important;
+    }
 }
 
+.error-message{
+    margin-top: 0.25rem;
+}
 .icon--container{
     display: flex;
     align-items: center;
