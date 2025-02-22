@@ -27,7 +27,7 @@
     &:focus-visible{
         outline: none;
     }
-    :-internal-autofill-selected {
+    &:-internal-autofill-selected {
         background-color: transparent !important;
     }
 }
