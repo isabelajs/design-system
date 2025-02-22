@@ -11,7 +11,7 @@ export type CardProps = {
   onAction?: () => void;
 };
 
-export const Card: React.FC<CardProps> = ({
+const Card: React.FC<CardProps> = ({
   title,
   description,
   icon,
@@ -28,3 +28,6 @@ export const Card: React.FC<CardProps> = ({
     </div>
   );
 };
+
+
+export default Card;
