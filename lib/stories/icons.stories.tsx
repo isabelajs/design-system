@@ -13,7 +13,7 @@ const meta: Meta<typeof Icon> = {
     customStyles: {
       description: 'Estilos CSS personalizados',
       control: 'object'
-    }
+    },
   }
 };
 
@@ -49,5 +49,13 @@ export const CustomStyledIcon: Story = {
         story: 'Los iconos pueden personalizarse usando la prop customStyles para modificar su color, tamaño y otras propiedades CSS.'
       }
     }
+  }
+};
+
+// Ejemplo con icono clickeable
+export const ClickableIcon: Story = {
+  args: {
+    icon: "FaBeer",
+    onClick: () => console.log("Icono clickeado")
   }
 };

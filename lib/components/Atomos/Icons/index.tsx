@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 export interface IconProps {
   icon: string;
   customStyles?: React.CSSProperties;
+  onClick?: () => void;
 }
 
 const iconModules = {
@@ -13,9 +14,10 @@ const iconModules = {
   gi: () => import('react-icons/gi'),
   fa: () => import('react-icons/fa'),
   tb: () => import('react-icons/tb'),
+  ri: () => import('react-icons/ri'),
 };
 
-const Icon = ({ icon, customStyles }: IconProps) => {
+const Icon = ({ icon, customStyles, onClick }: IconProps) => {
   const [IconComponent, setIconComponent] = useState<IconType | null>(null);
 
   useEffect(() => {
@@ -45,7 +47,7 @@ const Icon = ({ icon, customStyles }: IconProps) => {
   }, [icon]);
 
   if (!IconComponent) return null;
-  return <IconComponent style={customStyles} />;
+  return <IconComponent style={customStyles} onClick={onClick} />;
 };
 
 export default Icon;
